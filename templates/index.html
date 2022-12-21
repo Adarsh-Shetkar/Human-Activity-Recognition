@@ -1,61 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Bootstrap Photo Gallery Demo</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-    <link href="jquery.bsPhotoGallery.css" rel="stylesheet">
-    <script src="jquery.bsPhotoGallery.js"></script>	
-	
-    </script>
-    <script>
-      $(document).ready(function(){
-        $('ul.first').bsPhotoGallery({
-          "classes" : "col-xl-3 col-lg-2 col-md-4 col-sm-4",
-          "hasModal" : true,
-          "shortText" : false  
-        });
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>HAR using Smartphone</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+  <link href="jquery.bsPhotoGallery.css" rel="stylesheet">
+  <script src="jquery.bsPhotoGallery.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    p {
+      color: purple;
+      font-size: 24px;
+    }
+
+    .navbar {
+      color: white;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 50%;
+      float: left;
+      /* display: inline; */
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $('ul.first').bsPhotoGallery({
+        "classes": "col-xl-3 col-lg-2 col-md-4 col-sm-4",
+        "hasModal": true,
+        "shortText": false
       });
-    </script>
-  </head>
-  <body>
-    <div class="container">
-        <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding:30px 0 20px 0; margin-bottom:40px;">
-            <div class="col-lg-12">
-            <h3 style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">
-                <a style="text-decoration:none; color:#666;" href="http://michaelsoriano.com/create-a-responsive-photo-gallery-with-bootstrap-framework/">Human activity recognition system <span style="color:red;">Demo</span></a>
-            </h3>
-            <p>Resize your browser and watch the gallery adapt to the view port size. Clicking on an image will activate the Modal. Click <strong><a style="color:red" href="http://michaelsoriano.com/create-a-responsive-photo-gallery-with-bootstrap-framework/">Here</a></strong> to go back to the tutorial</p>
-            </div>
-        </div>
+    });
+  </script>
+</head>
 
-        <ul class="row first">
-            <li>
-                <img src="https://user-images.githubusercontent.com/49862149/91146092-089a3300-e6d4-11ea-87b8-a325922ed856.jpg" alt="">
-                <p>T-sne</p>
-            </li>
-  </ul>
+<body>
+
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="#">HAR using smartphone</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home</a>
+        <a class="nav-item nav-link"
+          href="https://archive-beta.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones" target="_blank">DataSet</a>
+        <a class="nav-item nav-link"
+          href="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/tree/main/Data%20after%20pre-processing/pre-processed"
+          target="_blank">Pre-Processed-Data</a>
+        <a class="nav-item nav-link" href="https://github.com/Adarsh-Shetkar/Human-Activity-Recognition"
+          target="_blank">Github</a>
+        <a class="nav-item nav-link"
+          href="https://drive.google.com/file/d/1glVRBT4IzyGYQNOcxR4vRf8YLIEQs3nH/view?usp=sharing"
+          target="_blank">Execution</a>
+        <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+      </div>
+    </div>
+  </nav>
 
 
-    </div> <!-- /container -->
+
+
+  <div class="container">
+    <div class="row"
+      style="text-align:center; border-bottom:1px dashed #ccc;  padding:5px 0 5px 0; margin-bottom:40px;">
+      <div class="col-lg-12">
+        <h3 style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">
+          <img src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/logo.jpg?raw=true">
+          <h1 style="text-decoration:none; color:#666;">Human Activity Recognition using Smartphone
+          </h1>
+        </h3>
+        <p style="color:black">To implement this model you can refer to the <a
+            href="https://drive.google.com/file/d/1glVRBT4IzyGYQNOcxR4vRf8YLIEQs3nH/view?usp=sharing">colab notebook</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container">
+        <p>Data Provided by each user</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/data%20provided%20by%20each%20user.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Smartphone activityname distribution</p>
+      </div>
+
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/Smartphone%20activity%20name%20distribution.jpg?raw=true"
+        alt="" style="width:100%">
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Static Activity</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/Stationary.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Moving Activities</p>
+      </div>
+      <img src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/Moving.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Static and Dynamic Activities box plot</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/Static%20and%20Dynamic%20Activities.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>GravityAccelerationComponants box plot</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/GravityAccelerationComponants.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>T-sne(t-distributed stochastic neighbor embedding)</p>
+      </div>
+      <img src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/t-sne.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Train time and accuracy</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/train%20time%20and%20acc.png?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Confusion matrix</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/confusion%20matrix.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
+    <div class="card">
+      <div class="container">
+        <p>Classification report</p>
+      </div>
+      <img
+        src="https://github.com/Adarsh-Shetkar/Dataset-for-HAR/blob/main/Images%20of%20output/Classification%20report.jpg?raw=true"
+        alt="" style="width:100%">
+
+    </div>
 
 
 
+  </div> <!-- /container -->
 
-
-
-
-
-
-  </body>
+</body>
 
 
 </html>
